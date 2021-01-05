@@ -10,8 +10,51 @@
 		187E6254259D1BB900BB4A51 /* AnAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E624A259D1BB900BB4A51 /* AnAppKit.framework */; };
 		187E6259259D1BB900BB4A51 /* AnAppKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6258259D1BB900BB4A51 /* AnAppKitTests.swift */; };
 		187E625B259D1BB900BB4A51 /* AnAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 187E624D259D1BB900BB4A51 /* AnAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		187E626B259D1E8200BB4A51 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 187E626A259D1E8200BB4A51 /* SwiftPackageProductDependency */; };
-		187E626D259D1E8200BB4A51 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 187E626C259D1E8200BB4A51 /* SwiftPackageProductDependency */; };
+		187E626B259D1E8200BB4A51 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 187E626A259D1E8200BB4A51 /* RealmSwift */; };
+		187E626D259D1E8200BB4A51 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 187E626C259D1E8200BB4A51 /* Realm */; };
+		187E633B259E593300BB4A51 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E633A259E593300BB4A51 /* UseCase.swift */; };
+		187E6366259E5C4000BB4A51 /* UserDataDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E633E259E5C3F00BB4A51 /* UserDataDependencyFactory.swift */; };
+		187E6367259E5C4000BB4A51 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6341259E5C3F00BB4A51 /* MockUserRepository.swift */; };
+		187E6368259E5C4000BB4A51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6343259E5C3F00BB4A51 /* User.swift */; };
+		187E6369259E5C4000BB4A51 /* User+DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6344259E5C3F00BB4A51 /* User+DTO.swift */; };
+		187E636A259E5C4000BB4A51 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6346259E5C3F00BB4A51 /* UserRepository.swift */; };
+		187E636B259E5C4000BB4A51 /* PersistentUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6347259E5C3F00BB4A51 /* PersistentUserRepository.swift */; };
+		187E636C259E5C4000BB4A51 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E634A259E5C3F00BB4A51 /* File.swift */; };
+		187E636D259E5C4000BB4A51 /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E634C259E5C3F00BB4A51 /* String+Email.swift */; };
+		187E636E259E5C4000BB4A51 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E634D259E5C3F00BB4A51 /* String+Date.swift */; };
+		187E636F259E5C4000BB4A51 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E634F259E5C3F00BB4A51 /* APIError.swift */; };
+		187E6370259E5C4000BB4A51 /* MockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6351259E5C3F00BB4A51 /* MockRouter.swift */; };
+		187E6371259E5C4000BB4A51 /* UserReponseErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6353259E5C3F00BB4A51 /* UserReponseErrorDTO.swift */; };
+		187E6372259E5C4000BB4A51 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6354259E5C3F00BB4A51 /* UserDTO.swift */; };
+		187E6373259E5C4000BB4A51 /* UserReponseSuccessDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6355259E5C3F00BB4A51 /* UserReponseSuccessDTO.swift */; };
+		187E6374259E5C4000BB4A51 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6356259E5C3F00BB4A51 /* Router.swift */; };
+		187E6375259E5C4000BB4A51 /* CreateUserPayload.json in Resources */ = {isa = PBXBuildFile; fileRef = 187E6359259E5C3F00BB4A51 /* CreateUserPayload.json */; };
+		187E6376259E5C4000BB4A51 /* UserService+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E635A259E5C3F00BB4A51 /* UserService+Endpoint.swift */; };
+		187E6377259E5C4000BB4A51 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E635B259E5C3F00BB4A51 /* Endpoint.swift */; };
+		187E6378259E5C4000BB4A51 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E635D259E5C4000BB4A51 /* UserService.swift */; };
+		187E6379259E5C4000BB4A51 /* FetchUsersSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 187E635F259E5C4000BB4A51 /* FetchUsersSuccessResponse.json */; };
+		187E637A259E5C4000BB4A51 /* StubUserServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6360259E5C4000BB4A51 /* StubUserServiceEndpoint.swift */; };
+		187E637B259E5C4000BB4A51 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6361259E5C4000BB4A51 /* MockUserService.swift */; };
+		187E637C259E5C4000BB4A51 /* CreateUserSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 187E6362259E5C4000BB4A51 /* CreateUserSuccessResponse.json */; };
+		187E637D259E5C4000BB4A51 /* DeleteUserFailureResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 187E6363259E5C4000BB4A51 /* DeleteUserFailureResponse.json */; };
+		187E637E259E5C4000BB4A51 /* UserRestfulService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6364259E5C4000BB4A51 /* UserRestfulService.swift */; };
+		187E637F259E5C4000BB4A51 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6365259E5C4000BB4A51 /* NetworkConstants.swift */; };
+		187E6385259E5D6200BB4A51 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E6384259E5D6200BB4A51 /* LoginDTO.swift */; };
+		187E639F25A16EF900BB4A51 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E639E25A16EF900BB4A51 /* Keychain.swift */; };
+		187E63A725A2592C00BB4A51 /* WorkerThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E63A625A2592C00BB4A51 /* WorkerThread.swift */; };
+		1898134525A27C4F005F8810 /* AnyPublisher+InjectBefore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898134425A27C4F005F8810 /* AnyPublisher+InjectBefore.swift */; };
+		1898135F25A2A7FD005F8810 /* RealmUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898135E25A2A7FD005F8810 /* RealmUserDataStore.swift */; };
+		1898136325A3C429005F8810 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898136225A3C429005F8810 /* UserSessionDataStore.swift */; };
+		1898136725A3C46C005F8810 /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898136625A3C46C005F8810 /* KeychainUserSessionDataStore.swift */; };
+		1898136B25A3C4CC005F8810 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898136A25A3C4CC005F8810 /* UserSessionRepository.swift */; };
+		1898136F25A3C55D005F8810 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898136E25A3C55D005F8810 /* AuthenticationService.swift */; };
+		1898137925A3C769005F8810 /* PersistentUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898137825A3C769005F8810 /* PersistentUserSessionRepository.swift */; };
+		1898139725A3DC38005F8810 /* MockAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898139625A3DC38005F8810 /* MockAuthenticationService.swift */; };
+		1898139C25A3DDBD005F8810 /* UserSessionDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898139B25A3DDBD005F8810 /* UserSessionDependencyFactory.swift */; };
+		189813DB25A3F2E1005F8810 /* RlmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813DA25A3F2E1005F8810 /* RlmUser.swift */; };
+		189813E725A3F8C3005F8810 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813E625A3F8C3005F8810 /* RealmProvider.swift */; };
+		189813EB25A3FA4D005F8810 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813EA25A3FA4D005F8810 /* Path.swift */; };
+		18A4F63F25A25D9400231AFB /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4F63E25A25D9400231AFB /* UserDataStore.swift */; };
 		F12BC24DC38C0E655E51F30A /* Pods_AnAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB851D237D3EC2BA8E3954 /* Pods_AnAppKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,11 +70,54 @@
 
 /* Begin PBXFileReference section */
 		187E624A259D1BB900BB4A51 /* AnAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		187E624D259D1BB900BB4A51 /* AnAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnAppKit.h; sourceTree = "<group>"; };
-		187E624E259D1BB900BB4A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187E624D259D1BB900BB4A51 /* AnAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnAppKit.h; path = AnAppKit/AnAppKit.h; sourceTree = "<group>"; };
+		187E624E259D1BB900BB4A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = AnAppKit/Info.plist; sourceTree = "<group>"; };
 		187E6253259D1BB900BB4A51 /* AnAppKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnAppKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E6258259D1BB900BB4A51 /* AnAppKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnAppKitTests.swift; sourceTree = "<group>"; };
 		187E625A259D1BB900BB4A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187E633A259E593300BB4A51 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		187E633E259E5C3F00BB4A51 /* UserDataDependencyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataDependencyFactory.swift; sourceTree = "<group>"; };
+		187E6341259E5C3F00BB4A51 /* MockUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		187E6343259E5C3F00BB4A51 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		187E6344259E5C3F00BB4A51 /* User+DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+DTO.swift"; sourceTree = "<group>"; };
+		187E6346259E5C3F00BB4A51 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		187E6347259E5C3F00BB4A51 /* PersistentUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentUserRepository.swift; sourceTree = "<group>"; };
+		187E634A259E5C3F00BB4A51 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		187E634C259E5C3F00BB4A51 /* String+Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
+		187E634D259E5C3F00BB4A51 /* String+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		187E634F259E5C3F00BB4A51 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		187E6351259E5C3F00BB4A51 /* MockRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
+		187E6353259E5C3F00BB4A51 /* UserReponseErrorDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReponseErrorDTO.swift; sourceTree = "<group>"; };
+		187E6354259E5C3F00BB4A51 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		187E6355259E5C3F00BB4A51 /* UserReponseSuccessDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReponseSuccessDTO.swift; sourceTree = "<group>"; };
+		187E6356259E5C3F00BB4A51 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		187E6359259E5C3F00BB4A51 /* CreateUserPayload.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateUserPayload.json; sourceTree = "<group>"; };
+		187E635A259E5C3F00BB4A51 /* UserService+Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserService+Endpoint.swift"; sourceTree = "<group>"; };
+		187E635B259E5C3F00BB4A51 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		187E635D259E5C4000BB4A51 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		187E635F259E5C4000BB4A51 /* FetchUsersSuccessResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchUsersSuccessResponse.json; sourceTree = "<group>"; };
+		187E6360259E5C4000BB4A51 /* StubUserServiceEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubUserServiceEndpoint.swift; sourceTree = "<group>"; };
+		187E6361259E5C4000BB4A51 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		187E6362259E5C4000BB4A51 /* CreateUserSuccessResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CreateUserSuccessResponse.json; sourceTree = "<group>"; };
+		187E6363259E5C4000BB4A51 /* DeleteUserFailureResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeleteUserFailureResponse.json; sourceTree = "<group>"; };
+		187E6364259E5C4000BB4A51 /* UserRestfulService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRestfulService.swift; sourceTree = "<group>"; };
+		187E6365259E5C4000BB4A51 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		187E6384259E5D6200BB4A51 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		187E639E25A16EF900BB4A51 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		187E63A625A2592C00BB4A51 /* WorkerThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerThread.swift; sourceTree = "<group>"; };
+		1898134425A27C4F005F8810 /* AnyPublisher+InjectBefore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+InjectBefore.swift"; sourceTree = "<group>"; };
+		1898135E25A2A7FD005F8810 /* RealmUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserDataStore.swift; sourceTree = "<group>"; };
+		1898136225A3C429005F8810 /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
+		1898136625A3C46C005F8810 /* KeychainUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUserSessionDataStore.swift; sourceTree = "<group>"; };
+		1898136A25A3C4CC005F8810 /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
+		1898136E25A3C55D005F8810 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		1898137825A3C769005F8810 /* PersistentUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentUserSessionRepository.swift; sourceTree = "<group>"; };
+		1898139625A3DC38005F8810 /* MockAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationService.swift; sourceTree = "<group>"; };
+		1898139B25A3DDBD005F8810 /* UserSessionDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDependencyFactory.swift; sourceTree = "<group>"; };
+		189813DA25A3F2E1005F8810 /* RlmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RlmUser.swift; sourceTree = "<group>"; };
+		189813E625A3F8C3005F8810 /* RealmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		189813EA25A3FA4D005F8810 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		18A4F63E25A25D9400231AFB /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		540B870D8C4611A96C9F8A65 /* Pods-AnAppKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnAppKit.release.xcconfig"; path = "Target Support Files/Pods-AnAppKit/Pods-AnAppKit.release.xcconfig"; sourceTree = "<group>"; };
 		67FB851D237D3EC2BA8E3954 /* Pods_AnAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CF6D042FBD728A90FA7452 /* Pods-AnAppKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnAppKit.debug.xcconfig"; path = "Target Support Files/Pods-AnAppKit/Pods-AnAppKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187E626D259D1E8200BB4A51 /* BuildFile in Frameworks */,
-				187E626B259D1E8200BB4A51 /* BuildFile in Frameworks */,
+				187E626D259D1E8200BB4A51 /* Realm in Frameworks */,
+				187E626B259D1E8200BB4A51 /* RealmSwift in Frameworks */,
 				F12BC24DC38C0E655E51F30A /* Pods_AnAppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				187E624C259D1BB900BB4A51 /* AnAppKit */,
+				187E624D259D1BB900BB4A51 /* AnAppKit.h */,
+				187E624E259D1BB900BB4A51 /* Info.plist */,
 				187E6257259D1BB900BB4A51 /* AnAppKitTests */,
 				187E624B259D1BB900BB4A51 /* Products */,
 				BB31393ED823BC885883F0FB /* Pods */,
@@ -82,8 +170,13 @@
 		187E624C259D1BB900BB4A51 /* AnAppKit */ = {
 			isa = PBXGroup;
 			children = (
-				187E624D259D1BB900BB4A51 /* AnAppKit.h */,
-				187E624E259D1BB900BB4A51 /* Info.plist */,
+				189813D925A3F2AA005F8810 /* DI Factory */,
+				187E638A259E5FC900BB4A51 /* Use Case */,
+				187E6345259E5C3F00BB4A51 /* Repository */,
+				18A4F63D25A25D7E00231AFB /* DataStore */,
+				187E634E259E5C3F00BB4A51 /* Network */,
+				187E6342259E5C3F00BB4A51 /* Model */,
+				187E6348259E5C3F00BB4A51 /* Utility */,
 			);
 			path = AnAppKit;
 			sourceTree = "<group>";
@@ -95,6 +188,211 @@
 				187E625A259D1BB900BB4A51 /* Info.plist */,
 			);
 			path = AnAppKitTests;
+			sourceTree = "<group>";
+		};
+		187E6340259E5C3F00BB4A51 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				187E6341259E5C3F00BB4A51 /* MockUserRepository.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		187E6342259E5C3F00BB4A51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187E6343259E5C3F00BB4A51 /* User.swift */,
+				187E6344259E5C3F00BB4A51 /* User+DTO.swift */,
+			);
+			name = Model;
+			path = Model/Model;
+			sourceTree = "<group>";
+		};
+		187E6345259E5C3F00BB4A51 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				187E6346259E5C3F00BB4A51 /* UserRepository.swift */,
+				1898136A25A3C4CC005F8810 /* UserSessionRepository.swift */,
+				1898137525A3C6B1005F8810 /* Implementation */,
+				187E6340259E5C3F00BB4A51 /* Test */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		187E6348259E5C3F00BB4A51 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				189813EA25A3FA4D005F8810 /* Path.swift */,
+				187E63A625A2592C00BB4A51 /* WorkerThread.swift */,
+				187E6349259E5C3F00BB4A51 /* Test */,
+				187E634B259E5C3F00BB4A51 /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		187E6349259E5C3F00BB4A51 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				187E634A259E5C3F00BB4A51 /* File.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		187E634B259E5C3F00BB4A51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				187E634C259E5C3F00BB4A51 /* String+Email.swift */,
+				187E634D259E5C3F00BB4A51 /* String+Date.swift */,
+				1898134425A27C4F005F8810 /* AnyPublisher+InjectBefore.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		187E634E259E5C3F00BB4A51 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				187E634F259E5C3F00BB4A51 /* APIError.swift */,
+				187E6356259E5C3F00BB4A51 /* Router.swift */,
+				187E6365259E5C4000BB4A51 /* NetworkConstants.swift */,
+				187E6350259E5C3F00BB4A51 /* Test */,
+				187E6352259E5C3F00BB4A51 /* DTO Model */,
+				187E6357259E5C3F00BB4A51 /* Endpoint */,
+				187E635C259E5C4000BB4A51 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		187E6350259E5C3F00BB4A51 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				187E6351259E5C3F00BB4A51 /* MockRouter.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		187E6352259E5C3F00BB4A51 /* DTO Model */ = {
+			isa = PBXGroup;
+			children = (
+				187E6353259E5C3F00BB4A51 /* UserReponseErrorDTO.swift */,
+				187E6354259E5C3F00BB4A51 /* UserDTO.swift */,
+				187E6355259E5C3F00BB4A51 /* UserReponseSuccessDTO.swift */,
+				187E6384259E5D6200BB4A51 /* LoginDTO.swift */,
+			);
+			path = "DTO Model";
+			sourceTree = "<group>";
+		};
+		187E6357259E5C3F00BB4A51 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				187E6358259E5C3F00BB4A51 /* Test */,
+				187E635A259E5C3F00BB4A51 /* UserService+Endpoint.swift */,
+				187E635B259E5C3F00BB4A51 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		187E6358259E5C3F00BB4A51 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				187E6359259E5C3F00BB4A51 /* CreateUserPayload.json */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		187E635C259E5C4000BB4A51 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				187E635D259E5C4000BB4A51 /* UserService.swift */,
+				1898136E25A3C55D005F8810 /* AuthenticationService.swift */,
+				1898139A25A3DD71005F8810 /* Implementation */,
+				187E635E259E5C4000BB4A51 /* Test */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		187E635E259E5C4000BB4A51 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				187E635F259E5C4000BB4A51 /* FetchUsersSuccessResponse.json */,
+				187E6360259E5C4000BB4A51 /* StubUserServiceEndpoint.swift */,
+				187E6361259E5C4000BB4A51 /* MockUserService.swift */,
+				187E6362259E5C4000BB4A51 /* CreateUserSuccessResponse.json */,
+				187E6363259E5C4000BB4A51 /* DeleteUserFailureResponse.json */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		187E638A259E5FC900BB4A51 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				187E633A259E593300BB4A51 /* UseCase.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		1898137225A3C5F6005F8810 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				1898136625A3C46C005F8810 /* KeychainUserSessionDataStore.swift */,
+				1898135E25A2A7FD005F8810 /* RealmUserDataStore.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		1898137525A3C6B1005F8810 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				187E6347259E5C3F00BB4A51 /* PersistentUserRepository.swift */,
+				1898137825A3C769005F8810 /* PersistentUserSessionRepository.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		1898139A25A3DD71005F8810 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				187E6364259E5C4000BB4A51 /* UserRestfulService.swift */,
+				1898139625A3DC38005F8810 /* MockAuthenticationService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		189813D925A3F2AA005F8810 /* DI Factory */ = {
+			isa = PBXGroup;
+			children = (
+				187E633E259E5C3F00BB4A51 /* UserDataDependencyFactory.swift */,
+				1898139B25A3DDBD005F8810 /* UserSessionDependencyFactory.swift */,
+			);
+			path = "DI Factory";
+			sourceTree = "<group>";
+		};
+		189813DE25A3F327005F8810 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				187E639E25A16EF900BB4A51 /* Keychain.swift */,
+				189813E625A3F8C3005F8810 /* RealmProvider.swift */,
+				189813E125A3F43C005F8810 /* Model */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		189813E125A3F43C005F8810 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189813DA25A3F2E1005F8810 /* RlmUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A4F63D25A25D7E00231AFB /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				18A4F63E25A25D9400231AFB /* UserDataStore.swift */,
+				1898136225A3C429005F8810 /* UserSessionDataStore.swift */,
+				1898137225A3C5F6005F8810 /* Implementation */,
+				189813DE25A3F327005F8810 /* Persistance */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		20E0553D71FD402E25DC8522 /* Frameworks */ = {
@@ -145,8 +443,8 @@
 			);
 			name = AnAppKit;
 			packageProductDependencies = (
-				187E626A259D1E8200BB4A51 /* SwiftPackageProductDependency */,
-				187E626C259D1E8200BB4A51 /* SwiftPackageProductDependency */,
+				187E626A259D1E8200BB4A51 /* RealmSwift */,
+				187E626C259D1E8200BB4A51 /* Realm */,
 			);
 			productName = AnAppKit;
 			productReference = 187E624A259D1BB900BB4A51 /* AnAppKit.framework */;
@@ -181,6 +479,7 @@
 				TargetAttributes = {
 					187E6249259D1BB900BB4A51 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					187E6252259D1BB900BB4A51 = {
 						CreatedOnToolsVersion = 12.3;
@@ -197,7 +496,7 @@
 			);
 			mainGroup = 187E6240259D1BB900BB4A51;
 			packageReferences = (
-				187E6269259D1E8200BB4A51 /* RemoteSwiftPackageReference */,
+				187E6269259D1E8200BB4A51 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 187E624B259D1BB900BB4A51 /* Products */;
 			projectDirPath = "";
@@ -214,6 +513,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E637C259E5C4000BB4A51 /* CreateUserSuccessResponse.json in Resources */,
+				187E6379259E5C4000BB4A51 /* FetchUsersSuccessResponse.json in Resources */,
+				187E6375259E5C4000BB4A51 /* CreateUserPayload.json in Resources */,
+				187E637D259E5C4000BB4A51 /* DeleteUserFailureResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +559,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E636E259E5C4000BB4A51 /* String+Date.swift in Sources */,
+				187E6385259E5D6200BB4A51 /* LoginDTO.swift in Sources */,
+				187E6371259E5C4000BB4A51 /* UserReponseErrorDTO.swift in Sources */,
+				187E636B259E5C4000BB4A51 /* PersistentUserRepository.swift in Sources */,
+				187E6368259E5C4000BB4A51 /* User.swift in Sources */,
+				187E6373259E5C4000BB4A51 /* UserReponseSuccessDTO.swift in Sources */,
+				187E636D259E5C4000BB4A51 /* String+Email.swift in Sources */,
+				1898136325A3C429005F8810 /* UserSessionDataStore.swift in Sources */,
+				187E6367259E5C4000BB4A51 /* MockUserRepository.swift in Sources */,
+				187E637A259E5C4000BB4A51 /* StubUserServiceEndpoint.swift in Sources */,
+				189813EB25A3FA4D005F8810 /* Path.swift in Sources */,
+				187E6376259E5C4000BB4A51 /* UserService+Endpoint.swift in Sources */,
+				187E636A259E5C4000BB4A51 /* UserRepository.swift in Sources */,
+				1898136F25A3C55D005F8810 /* AuthenticationService.swift in Sources */,
+				187E63A725A2592C00BB4A51 /* WorkerThread.swift in Sources */,
+				187E6374259E5C4000BB4A51 /* Router.swift in Sources */,
+				187E6377259E5C4000BB4A51 /* Endpoint.swift in Sources */,
+				1898139725A3DC38005F8810 /* MockAuthenticationService.swift in Sources */,
+				187E6370259E5C4000BB4A51 /* MockRouter.swift in Sources */,
+				187E6366259E5C4000BB4A51 /* UserDataDependencyFactory.swift in Sources */,
+				187E6378259E5C4000BB4A51 /* UserService.swift in Sources */,
+				1898135F25A2A7FD005F8810 /* RealmUserDataStore.swift in Sources */,
+				187E636C259E5C4000BB4A51 /* File.swift in Sources */,
+				189813E725A3F8C3005F8810 /* RealmProvider.swift in Sources */,
+				187E633B259E593300BB4A51 /* UseCase.swift in Sources */,
+				1898137925A3C769005F8810 /* PersistentUserSessionRepository.swift in Sources */,
+				187E6369259E5C4000BB4A51 /* User+DTO.swift in Sources */,
+				18A4F63F25A25D9400231AFB /* UserDataStore.swift in Sources */,
+				187E639F25A16EF900BB4A51 /* Keychain.swift in Sources */,
+				187E637B259E5C4000BB4A51 /* MockUserService.swift in Sources */,
+				187E6372259E5C4000BB4A51 /* UserDTO.swift in Sources */,
+				1898139C25A3DDBD005F8810 /* UserSessionDependencyFactory.swift in Sources */,
+				187E637E259E5C4000BB4A51 /* UserRestfulService.swift in Sources */,
+				187E636F259E5C4000BB4A51 /* APIError.swift in Sources */,
+				1898134525A27C4F005F8810 /* AnyPublisher+InjectBefore.swift in Sources */,
+				187E637F259E5C4000BB4A51 /* NetworkConstants.swift in Sources */,
+				1898136B25A3C4CC005F8810 /* UserSessionRepository.swift in Sources */,
+				1898136725A3C46C005F8810 /* KeychainUserSessionDataStore.swift in Sources */,
+				189813DB25A3F2E1005F8810 /* RlmUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1CF6D042FBD728A90FA7452 /* Pods-AnAppKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -419,6 +762,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harman-orsay.AnAppKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,6 +772,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 540B870D8C4611A96C9F8A65 /* Pods-AnAppKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -451,6 +796,7 @@
 		187E6262259D1BB900BB4A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnAppKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,6 +814,7 @@
 		187E6263259D1BB900BB4A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AnAppKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,7 +862,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		187E6269259D1E8200BB4A51 /* RemoteSwiftPackageReference */ = {
+		187E6269259D1E8200BB4A51 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
 			requirement = {
@@ -526,14 +873,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		187E626A259D1E8200BB4A51 /* SwiftPackageProductDependency */ = {
+		187E626A259D1E8200BB4A51 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 187E6269259D1E8200BB4A51 /* RemoteSwiftPackageReference */;
+			package = 187E6269259D1E8200BB4A51 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		187E626C259D1E8200BB4A51 /* SwiftPackageProductDependency */ = {
+		187E626C259D1E8200BB4A51 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 187E6269259D1E8200BB4A51 /* RemoteSwiftPackageReference */;
+			package = 187E6269259D1E8200BB4A51 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */

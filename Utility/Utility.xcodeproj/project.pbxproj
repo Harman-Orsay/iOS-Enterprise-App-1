@@ -10,6 +10,7 @@
 		187E6287259D1F7A00BB4A51 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E627D259D1F7A00BB4A51 /* Utility.framework */; };
 		187E628C259D1F7A00BB4A51 /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E628B259D1F7A00BB4A51 /* UtilityTests.swift */; };
 		187E628E259D1F7A00BB4A51 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 187E6280259D1F7A00BB4A51 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		189813CA25A3F20E005F8810 /* ReachabilityObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813C925A3F20E005F8810 /* ReachabilityObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		187E6286259D1F7A00BB4A51 /* UtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E628B259D1F7A00BB4A51 /* UtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 		187E628D259D1F7A00BB4A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189813C925A3F20E005F8810 /* ReachabilityObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		187E627F259D1F7A00BB4A51 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				189813C925A3F20E005F8810 /* ReachabilityObserver.swift */,
 				187E6280259D1F7A00BB4A51 /* Utility.h */,
 				187E6281259D1F7A00BB4A51 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189813CA25A3F20E005F8810 /* ReachabilityObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +391,7 @@
 		187E6295259D1F7A00BB4A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UtilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +409,7 @@
 		187E6296259D1F7A00BB4A51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UtilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
