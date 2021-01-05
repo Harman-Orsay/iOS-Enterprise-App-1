@@ -9,6 +9,7 @@ import Foundation
 
 public protocol UserDataDependencyFactory {
     func makeUseCaseFactory() -> UserUseCaseFactory
+    func makeRepository() -> UserRepository
 }
 
  class UserDataDependencyFactoryFactory: UserDataDependencyFactory {

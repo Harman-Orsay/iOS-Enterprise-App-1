@@ -7,7 +7,20 @@
 		<key>AnAppKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>187E6249259D1BB900BB4A51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>187E6252259D1BB900BB4A51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
