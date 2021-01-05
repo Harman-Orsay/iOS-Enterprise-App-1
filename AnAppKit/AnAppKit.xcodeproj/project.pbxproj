@@ -55,6 +55,16 @@
 		189813E725A3F8C3005F8810 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813E625A3F8C3005F8810 /* RealmProvider.swift */; };
 		189813EB25A3FA4D005F8810 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189813EA25A3FA4D005F8810 /* Path.swift */; };
 		18A4F63F25A25D9400231AFB /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4F63E25A25D9400231AFB /* UserDataStore.swift */; };
+		18ED03BE25A41572001ACD09 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03BD25A41572001ACD09 /* LoginUseCase.swift */; };
+		18ED03C225A415A1001ACD09 /* LogOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03C125A415A1001ACD09 /* LogOutUseCase.swift */; };
+		18ED03C625A415C9001ACD09 /* AddUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03C525A415C9001ACD09 /* AddUserUseCase.swift */; };
+		18ED03CA25A415D9001ACD09 /* DeleteUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03C925A415D9001ACD09 /* DeleteUserUseCase.swift */; };
+		18ED03CE25A415EE001ACD09 /* SortUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03CD25A415EE001ACD09 /* SortUsersUseCase.swift */; };
+		18ED03D225A4160C001ACD09 /* GetUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03D125A4160C001ACD09 /* GetUsersUseCase.swift */; };
+		18ED03D625A41624001ACD09 /* LoadNextUsersPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03D525A41624001ACD09 /* LoadNextUsersPageUseCase.swift */; };
+		18ED03DE25A41703001ACD09 /* UserUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03DD25A41703001ACD09 /* UserUseCaseFactory.swift */; };
+		18ED03E425A4192D001ACD09 /* UserSessionUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03E325A4192D001ACD09 /* UserSessionUseCaseFactory.swift */; };
+		18ED03E825A41B34001ACD09 /* AppKitDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03E725A41B34001ACD09 /* AppKitDependencyFactory.swift */; };
 		F12BC24DC38C0E655E51F30A /* Pods_AnAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FB851D237D3EC2BA8E3954 /* Pods_AnAppKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +128,16 @@
 		189813E625A3F8C3005F8810 /* RealmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		189813EA25A3FA4D005F8810 /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		18A4F63E25A25D9400231AFB /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		18ED03BD25A41572001ACD09 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		18ED03C125A415A1001ACD09 /* LogOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutUseCase.swift; sourceTree = "<group>"; };
+		18ED03C525A415C9001ACD09 /* AddUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserUseCase.swift; sourceTree = "<group>"; };
+		18ED03C925A415D9001ACD09 /* DeleteUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserUseCase.swift; sourceTree = "<group>"; };
+		18ED03CD25A415EE001ACD09 /* SortUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortUsersUseCase.swift; sourceTree = "<group>"; };
+		18ED03D125A4160C001ACD09 /* GetUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsersUseCase.swift; sourceTree = "<group>"; };
+		18ED03D525A41624001ACD09 /* LoadNextUsersPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadNextUsersPageUseCase.swift; sourceTree = "<group>"; };
+		18ED03DD25A41703001ACD09 /* UserUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCaseFactory.swift; sourceTree = "<group>"; };
+		18ED03E325A4192D001ACD09 /* UserSessionUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionUseCaseFactory.swift; sourceTree = "<group>"; };
+		18ED03E725A41B34001ACD09 /* AppKitDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKitDependencyFactory.swift; sourceTree = "<group>"; };
 		540B870D8C4611A96C9F8A65 /* Pods-AnAppKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnAppKit.release.xcconfig"; path = "Target Support Files/Pods-AnAppKit/Pods-AnAppKit.release.xcconfig"; sourceTree = "<group>"; };
 		67FB851D237D3EC2BA8E3954 /* Pods_AnAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CF6D042FBD728A90FA7452 /* Pods-AnAppKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnAppKit.debug.xcconfig"; path = "Target Support Files/Pods-AnAppKit/Pods-AnAppKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +190,7 @@
 		187E624C259D1BB900BB4A51 /* AnAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				18ED03E725A41B34001ACD09 /* AppKitDependencyFactory.swift */,
 				189813D925A3F2AA005F8810 /* DI Factory */,
 				187E638A259E5FC900BB4A51 /* Use Case */,
 				187E6345259E5C3F00BB4A51 /* Repository */,
@@ -326,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				187E633A259E593300BB4A51 /* UseCase.swift */,
+				18ED03D925A416C9001ACD09 /* User */,
+				18ED03DC25A416D4001ACD09 /* Session */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -362,6 +385,8 @@
 			children = (
 				187E633E259E5C3F00BB4A51 /* UserDataDependencyFactory.swift */,
 				1898139B25A3DDBD005F8810 /* UserSessionDependencyFactory.swift */,
+				18ED03DD25A41703001ACD09 /* UserUseCaseFactory.swift */,
+				18ED03E325A4192D001ACD09 /* UserSessionUseCaseFactory.swift */,
 			);
 			path = "DI Factory";
 			sourceTree = "<group>";
@@ -393,6 +418,27 @@
 				189813DE25A3F327005F8810 /* Persistance */,
 			);
 			path = DataStore;
+			sourceTree = "<group>";
+		};
+		18ED03D925A416C9001ACD09 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				18ED03D525A41624001ACD09 /* LoadNextUsersPageUseCase.swift */,
+				18ED03D125A4160C001ACD09 /* GetUsersUseCase.swift */,
+				18ED03C925A415D9001ACD09 /* DeleteUserUseCase.swift */,
+				18ED03CD25A415EE001ACD09 /* SortUsersUseCase.swift */,
+				18ED03C525A415C9001ACD09 /* AddUserUseCase.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		18ED03DC25A416D4001ACD09 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				18ED03BD25A41572001ACD09 /* LoginUseCase.swift */,
+				18ED03C125A415A1001ACD09 /* LogOutUseCase.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		20E0553D71FD402E25DC8522 /* Frameworks */ = {
@@ -563,13 +609,19 @@
 				187E6385259E5D6200BB4A51 /* LoginDTO.swift in Sources */,
 				187E6371259E5C4000BB4A51 /* UserReponseErrorDTO.swift in Sources */,
 				187E636B259E5C4000BB4A51 /* PersistentUserRepository.swift in Sources */,
+				18ED03CE25A415EE001ACD09 /* SortUsersUseCase.swift in Sources */,
 				187E6368259E5C4000BB4A51 /* User.swift in Sources */,
 				187E6373259E5C4000BB4A51 /* UserReponseSuccessDTO.swift in Sources */,
 				187E636D259E5C4000BB4A51 /* String+Email.swift in Sources */,
 				1898136325A3C429005F8810 /* UserSessionDataStore.swift in Sources */,
 				187E6367259E5C4000BB4A51 /* MockUserRepository.swift in Sources */,
 				187E637A259E5C4000BB4A51 /* StubUserServiceEndpoint.swift in Sources */,
+				18ED03D225A4160C001ACD09 /* GetUsersUseCase.swift in Sources */,
+				18ED03C625A415C9001ACD09 /* AddUserUseCase.swift in Sources */,
+				18ED03C225A415A1001ACD09 /* LogOutUseCase.swift in Sources */,
+				18ED03E425A4192D001ACD09 /* UserSessionUseCaseFactory.swift in Sources */,
 				189813EB25A3FA4D005F8810 /* Path.swift in Sources */,
+				18ED03E825A41B34001ACD09 /* AppKitDependencyFactory.swift in Sources */,
 				187E6376259E5C4000BB4A51 /* UserService+Endpoint.swift in Sources */,
 				187E636A259E5C4000BB4A51 /* UserRepository.swift in Sources */,
 				1898136F25A3C55D005F8810 /* AuthenticationService.swift in Sources */,
@@ -581,8 +633,10 @@
 				187E6366259E5C4000BB4A51 /* UserDataDependencyFactory.swift in Sources */,
 				187E6378259E5C4000BB4A51 /* UserService.swift in Sources */,
 				1898135F25A2A7FD005F8810 /* RealmUserDataStore.swift in Sources */,
+				18ED03CA25A415D9001ACD09 /* DeleteUserUseCase.swift in Sources */,
 				187E636C259E5C4000BB4A51 /* File.swift in Sources */,
 				189813E725A3F8C3005F8810 /* RealmProvider.swift in Sources */,
+				18ED03DE25A41703001ACD09 /* UserUseCaseFactory.swift in Sources */,
 				187E633B259E593300BB4A51 /* UseCase.swift in Sources */,
 				1898137925A3C769005F8810 /* PersistentUserSessionRepository.swift in Sources */,
 				187E6369259E5C4000BB4A51 /* User+DTO.swift in Sources */,
@@ -594,10 +648,12 @@
 				187E637E259E5C4000BB4A51 /* UserRestfulService.swift in Sources */,
 				187E636F259E5C4000BB4A51 /* APIError.swift in Sources */,
 				1898134525A27C4F005F8810 /* AnyPublisher+InjectBefore.swift in Sources */,
+				18ED03D625A41624001ACD09 /* LoadNextUsersPageUseCase.swift in Sources */,
 				187E637F259E5C4000BB4A51 /* NetworkConstants.swift in Sources */,
 				1898136B25A3C4CC005F8810 /* UserSessionRepository.swift in Sources */,
 				1898136725A3C46C005F8810 /* KeychainUserSessionDataStore.swift in Sources */,
 				189813DB25A3F2E1005F8810 /* RlmUser.swift in Sources */,
+				18ED03BE25A41572001ACD09 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

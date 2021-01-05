@@ -7,20 +7,20 @@
 
 import Foundation
 
-public class UserSessionDependencyFactory {
+public protocol UserSessionDependencyFactory {
+    func makeUserSessionUseCaseFactory() -> UserSessionUseCaseFactory
+}
+
+class UserSessionDependencyFactoryFactory: UserSessionDependencyFactory {
     
     public init(){}
     
+    public func makeUserSessionUseCaseFactory() -> UserSessionUseCaseFactory {
+        UserSessionUseCaseContainer(repository: makeRepository())
+    }
+    
     public func makeRepository() -> UserSessionRepository {
-        #if TEST || TEST_UI
-        
-        return MockUserRepository()
-        
-        #else
-        
         return PersistentUserSessionRepository(service: makeService(), dataStore: makeDataStore())
-
-        #endif
     }
     
     private func makeService() -> AuthenticationService {

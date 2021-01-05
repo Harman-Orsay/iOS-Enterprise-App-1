@@ -8,12 +8,15 @@
 import RealmSwift
 
 class RlmUser: Object {
-    
-    dynamic var name: String = ""
+        
     dynamic var id: Int = -1
-    dynamic var updatedAt: Date?
+    dynamic var email: String = ""
+    dynamic var name: String = ""
+    dynamic var genderRaw: String = ""
+    dynamic var statusRaw: String = ""
+    dynamic var lastUpdated: Date?
     dynamic var primaryKey: String = ""
-    
+
     static var writer: WorkerThread {
         WorkerThread(name: "RlmUser.Writer")
     }
@@ -21,21 +24,29 @@ class RlmUser: Object {
     override class func primaryKey() -> String? {
         "primaryKey"
     }
-    
-    func getPrimaryKey() -> String {
-        id > 0 ? "\(id)" : Date().description
-    }
-    
+
     convenience init(user: User) {
         self.init()
-        name = user.email
         id = user.id
+        name = user.email
+        email = user.email
+        genderRaw = user.gender.rawValue
+        statusRaw = user.status.rawValue
+        lastUpdated = user.lastUpdated
+        primaryKey = user.rlmPrimaryKey
     }
     
     var user: User {
-        User(id: 0, name: name, email: "", gender: .female, status: .active, lastUpdated: Date())
+        User(id: id,
+             name: name,
+             email: email,
+             gender: User.Gender(rawValue: genderRaw) ?? .female,
+             status: User.Status(rawValue: statusRaw) ?? .active,
+             lastUpdated: lastUpdated ?? Date())
     }
-    
+}
+
+extension RlmUser {
     static func add(users: [User]) {
         autoreleasepool {
             writer.enqueue {
@@ -57,7 +68,8 @@ class RlmUser: Object {
     }
 }
 
-extension RlmUser {
-    
-
+extension User {
+    var rlmPrimaryKey: String {
+        id > 0 ? "\(id)" : Date().description
+    }
 }
