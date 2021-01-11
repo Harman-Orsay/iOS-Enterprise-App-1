@@ -7,12 +7,11 @@
 
 import Foundation
 
-public protocol UserDataDependencyFactory {
+public protocol UserDependencyFactory {
     func makeUseCaseFactory() -> UserUseCaseFactory
-    func makeRepository() -> UserRepository
 }
 
- class UserDataDependencyFactoryFactory: UserDataDependencyFactory {
+ class UserDataDependencyFactoryFactory: UserDependencyFactory {
     
     public init(){}
     
@@ -20,7 +19,7 @@ public protocol UserDataDependencyFactory {
         UserUseCaseFactoryContainer(repository: makeRepository())
     }
     
-    public func makeRepository() -> UserRepository {
+    private func makeRepository() -> UserRepository {
         #if TEST || TEST_UI
         
         return MockUserRepository()

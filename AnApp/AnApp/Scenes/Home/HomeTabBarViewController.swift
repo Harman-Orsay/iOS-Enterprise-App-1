@@ -17,6 +17,7 @@ class HomeTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         if let userListVC = (viewControllers?.first as? UINavigationController)?.viewControllers.first as? UserListViewController {
+            userListPresenter.ui = userListVC
             userListVC.presenter = userListPresenter
             userListVC.viewControllerFactory = userListViewFactory
         }

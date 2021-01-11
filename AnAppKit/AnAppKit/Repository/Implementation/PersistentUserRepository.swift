@@ -57,7 +57,8 @@ extension PersistentUserRepository: UserRepository {
     
     func getMore() -> AnyPublisher<Void, APIError.User> {
         guard cache.count == userPublisher.value.count else {
-            userPublisher.send(Array(cache[0 ..< userPublisher.value.count + pageSize]))
+            let countToReturn = cache.count > userPublisher.value.count + pageSize ? userPublisher.value.count + pageSize : cache.count
+            userPublisher.send(Array(cache[0 ..< countToReturn]))
             return Just(()).mapError{_ in APIError.User.network}.eraseToAnyPublisher()
         }
         

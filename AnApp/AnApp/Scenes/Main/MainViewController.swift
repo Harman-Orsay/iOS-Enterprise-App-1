@@ -11,7 +11,7 @@ import AnAppKit
 class MainViewController: UIViewController {
 
     var presenter: MainPresenter!
-    var viewFactory: MainVCViewFactory!
+    var viewControllerFactory: MainViewControllerFactory!
     var loaded: Bool = false
     
     override func viewDidLoad() {
@@ -27,35 +27,33 @@ class MainViewController: UIViewController {
     
     func presentViewController(action: MainViewAction) {
         switch action {
-        case .launch: present(viewFactory.makeLaunchViewController(), animated: false, completion: nil)
-        case .login: present(viewFactory.makeLoginViewController(), animated: true, completion: nil)
+        case .launch: present(viewControllerFactory.makeLaunchViewController(), animated: false, completion: nil)
+        case .login: present(viewControllerFactory.makeLoginViewController(), animated: true, completion: nil)
         case .signup: break
-        case .home(let session): present(viewFactory.makeHomeViewController(userSession: session), animated: true, completion: nil)
+        case .home(let session): present(viewControllerFactory.makeHomeViewController(userSession: session), animated: true, completion: nil)
         }
     }
 }
 
 extension MainViewController: MainUI {
     func perform(action: MainViewAction) {
-        if case .signup = action {
-            presentAlert(title: "Sign up not implemented", message: "Enter any username & password to login")
-            return
-        }
-        
         if let presentedVC = presentedViewController {
+            if case .signup = action { //Dummy
+                presentedVC.presentAlert(title: "Sign up not implemented", message: "Enter any username & password to login")
+                return
+            }
+
             presentedVC.dismiss(animated: false, completion: {
                 self.presentViewController(action: action)
             })
 
         } else {
             presentViewController(action: action)
-        }
-        
-        
+        }        
     }    
 }
 
-protocol MainVCViewFactory {
+protocol MainViewControllerFactory {
     func makeLaunchViewController() -> LaunchViewController
     func makeLoginViewController() -> LoginViewController
     func makeSignUpViewController() -> UIViewController

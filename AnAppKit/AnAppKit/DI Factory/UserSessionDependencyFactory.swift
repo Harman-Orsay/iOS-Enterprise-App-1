@@ -8,19 +8,18 @@
 import Foundation
 
 public protocol UserSessionDependencyFactory {
-    func makeUserSessionUseCaseFactory() -> UserSessionUseCaseFactory
-    func makeRepository() -> UserSessionRepository
+    func makeUseCaseFactory() -> UserSessionUseCaseFactory
 }
 
 class UserSessionDependencyFactoryFactory: UserSessionDependencyFactory {
     
     public init(){}
     
-    public func makeUserSessionUseCaseFactory() -> UserSessionUseCaseFactory {
+    public func makeUseCaseFactory() -> UserSessionUseCaseFactory {
         UserSessionUseCaseContainer(repository: makeRepository())
     }
     
-    public func makeRepository() -> UserSessionRepository {
+    private func makeRepository() -> UserSessionRepository {
         return PersistentUserSessionRepository(service: makeService(), dataStore: makeDataStore())
     }
     

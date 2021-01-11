@@ -33,7 +33,9 @@ class LaunchPresenter: Presenter {
     func uiDidLoad() {
         useCase.execute(onStart: nil)
             .sink(receiveCompletion: { completion in
-                self.responder.appLaunched(with: .notSignedIn)
+                if case .failure(_) = completion {
+                    self.responder.appLaunched(with: .notSignedIn)
+                }
             }, receiveValue: { session in
                 self.responder.appLaunched(with: .signedIn(session: session))
             })

@@ -35,6 +35,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="gxC-5M-XM3" eventType="touchUpInside" id="PSc-SQ-K3B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRm-cD-weu">
                                 <rect key="frame" x="64" y="344" width="286" height="48"/>
@@ -45,6 +48,9 @@
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupTapped:" destination="gxC-5M-XM3" eventType="touchUpInside" id="Zec-ha-4e2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DiY-kU-9rG"/>
@@ -64,6 +70,10 @@
                             <constraint firstItem="oIK-s2-h0f" firstAttribute="leading" secondItem="DiY-kU-9rG" secondAttribute="leading" constant="64" id="xly-l1-cbO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="V2Y-kD-fxu" id="wFg-9l-b9h"/>
+                        <outlet property="usernameTextField" destination="unG-c6-SNC" id="5Tl-Qh-LOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrJ-9w-Lui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

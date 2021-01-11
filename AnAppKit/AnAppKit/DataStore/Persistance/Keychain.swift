@@ -83,7 +83,7 @@ extension Keychain.Item {
     
     fileprivate var attributes: [String: AnyObject] {
         var attributes = [String: AnyObject]()
-        attributes[kSecAttrService as String] = Keychain.service as AnyObject
+//        attributes[kSecAttrService as String] = Keychain.service as AnyObject
         
         switch self {
         case .token:

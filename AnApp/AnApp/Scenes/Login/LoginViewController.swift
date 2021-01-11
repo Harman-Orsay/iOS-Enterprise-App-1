@@ -6,52 +6,48 @@
 //
 
 import UIKit
-import AnAppKit
-import AnAppUIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    let activityIndicator: UIActivityIndicatorView  = {
+        let indicator = UIActivityIndicatorView(style: .large)
+      indicator.hidesWhenStopped = true
+      return indicator
+    }()
+    
     var presenter: LoginPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.uiDidLoad()
     }
+    @IBAction func loginTapped(_ sender: Any) {
+        presenter.actionLogin(username: usernameTextField.text, password: passwordTextField.text)
+    }
     
-
+    @IBAction func signupTapped(_ sender: Any) {
+        presenter.actionSignUp()
+    }
 }
 
-protocol LoginResponder: Responder {
-    func loggedIn(session: UserSession)
-}
-
-protocol SignUpNavigator: Navigator {
-    func navigateToSignUp()
-}
-
-protocol LoginUI: UI {
-    func showError(title: String, message: String)
-    func showActivityIndicator()
-    func hideActivityIndicator()
-}
-
-class LoginPresenter: Presenter {
-    func uiDidLoad() {
+extension LoginViewController: LoginUI {
+    
+    func updateActivityIndicator(show: Bool) {
+        if activityIndicator.superview == nil {
+            activityIndicator.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
+            view.addSubview(activityIndicator)
+        }
         
+        if show {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
     }
     
-    weak var ui: LoginUI!
-    var loginResponder: LoginResponder
-    var signupNavigator: SignUpNavigator
-    var useCaseFactory: LoginUseCaseFactory
-    
-    init(loginResponder: LoginResponder, signupNavigator: SignUpNavigator, useCaseFactory: LoginUseCaseFactory) {
-        self.loginResponder = loginResponder
-        self.signupNavigator = signupNavigator
-        self.useCaseFactory = useCaseFactory
+    func showError(title: String, message: String) {
+        presentAlert(title: title, message: message)
     }
-}
-
-protocol LoginUseCaseFactory {
-    func makeLoginUseCase(username: String, password: String) -> LoginUseCase
 }

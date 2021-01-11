@@ -10,7 +10,7 @@ import Foundation
 public class AnAppKitDependencyFactory {
     public init() {}
     
-    public func makeUserDataDependencyFactory() -> UserDataDependencyFactory {
+    public func makeUserDependencyFactory() -> UserDependencyFactory {
         UserDataDependencyFactoryFactory()
     }
     

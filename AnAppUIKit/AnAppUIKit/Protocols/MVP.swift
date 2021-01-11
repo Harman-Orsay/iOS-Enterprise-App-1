@@ -17,3 +17,7 @@ public protocol Responder: class {}
 public protocol Navigator: Responder {}
 //reposnder & navigator r both implemented by view model / presenter For //for presenter / view model (they receive it)
 
+
+public extension Presenter {
+    func uiDidLoad(){}
+}

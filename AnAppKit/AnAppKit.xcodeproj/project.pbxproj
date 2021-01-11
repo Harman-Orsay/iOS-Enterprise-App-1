@@ -357,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				187E633A259E593300BB4A51 /* UseCase.swift */,
+				18ED06C925AD05B8001ACD09 /* Factory */,
 				18ED03D925A416C9001ACD09 /* User */,
 				18ED03DC25A416D4001ACD09 /* Session */,
 			);
@@ -395,8 +396,6 @@
 			children = (
 				187E633E259E5C3F00BB4A51 /* UserDataDependencyFactory.swift */,
 				1898139B25A3DDBD005F8810 /* UserSessionDependencyFactory.swift */,
-				18ED03DD25A41703001ACD09 /* UserUseCaseFactory.swift */,
-				18ED03E325A4192D001ACD09 /* UserSessionUseCaseFactory.swift */,
 			);
 			path = "DI Factory";
 			sourceTree = "<group>";
@@ -450,6 +449,15 @@
 				18ED065125A7E6EC001ACD09 /* CheckLoginStatusUseCase.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		18ED06C925AD05B8001ACD09 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				18ED03DD25A41703001ACD09 /* UserUseCaseFactory.swift */,
+				18ED03E325A4192D001ACD09 /* UserSessionUseCaseFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		20E0553D71FD402E25DC8522 /* Frameworks */ = {

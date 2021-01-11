@@ -62,7 +62,7 @@ extension RlmUser {
         writer.enqueue {
             let realm = rlm
             try? realm.write {
-            if let object = realm.object(ofType: Self.self, forPrimaryKey: user.id) {
+            if let object = realm.object(ofType: Self.self, forPrimaryKey: user.rlmPrimaryKey) {
                 realm.delete(object)
             }
             }
