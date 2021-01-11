@@ -32,6 +32,7 @@ class UserListViewController: UIViewController {
     }()
     
     var subscriptions = Set<AnyCancellable>()
+    var presenter: UserListPresenter!
     var viewModel: UserListViewModel!
     var viewControllerFactory: UserListViewControllerFactory!
     
@@ -99,13 +100,13 @@ class UserListViewController: UIViewController {
 
 extension UserListViewController {
     func showAddUser(responder: AddUserResponder) {
-        present(viewControllerFactory.makeAddUserNavigationController(responder: responder),
+        present(viewControllerFactory.makeAddUserNavigationController(),
                 animated: true,
                 completion: nil)
     }
     
     func showSortList(responder: SortFieldSelectionResponder, currentSortField: User.SortableField) {
-        present(viewControllerFactory.makeSortFieldsNavigationController(responder: responder, selectedField: currentSortField),
+        present(viewControllerFactory.makeSortFieldsNavigationController(selectedField: currentSortField),
                 animated: true,
                 completion: nil)
     }
@@ -173,5 +174,42 @@ extension UserListViewController {
                 presentAlert(title: error.title, message: error.message)
             }
             .store(in: &subscriptions)
+    }
+}
+
+protocol UserListUI: UI {
+    func updateActivityIndicator(show: Bool)
+    func showError(title: String, message: String)
+    func show(users: [User])
+    func perform(action: UserListViewAction)
+    func updateLoadMoreActivityIndicator(state: LoadingIndicatorTableHeaderFooterView.State)
+}
+
+class UserListPresenter: Presenter {
+    func uiDidLoad() {
+        
+    }
+    
+    var ui: UserListUI!
+    var useCaseFactory: UserUseCaseFactory
+    
+    init(factory: UserUseCaseFactory) {
+        self.useCaseFactory = factory
+    }
+}
+
+extension UserListPresenter: AddUserResponder {
+    func canceled() {
+        
+    }
+    
+    func created(user: User) {
+        
+    }
+}
+
+extension UserListPresenter: SortFieldSelectionResponder {
+    func selected(field: User.SortableField) {
+        
     }
 }

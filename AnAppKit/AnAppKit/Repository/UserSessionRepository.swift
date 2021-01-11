@@ -7,9 +7,12 @@
 
 import Combine
 
-public protocol UserSessionRepository {
+public protocol UserSessionRepository: CurrentSessionRepository {
     
     func login(username: String, password: String) -> AnyPublisher<UserSession, LoginError>
     func logout() -> AnyPublisher<Void, SessionError>
+}
+
+public protocol CurrentSessionRepository {
     func getCurrentSession() -> AnyPublisher<UserSession, SessionError>
 }

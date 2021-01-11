@@ -9,13 +9,13 @@ import RealmSwift
 
 class RlmUser: Object {
         
-    dynamic var id: Int = -1
-    dynamic var email: String = ""
-    dynamic var name: String = ""
-    dynamic var genderRaw: String = ""
-    dynamic var statusRaw: String = ""
-    dynamic var lastUpdated: Date?
-    dynamic var primaryKey: String = ""
+    @objc dynamic var id: Int = -1
+    @objc dynamic var email: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var genderRaw: String = ""
+    @objc dynamic var statusRaw: String = ""
+    @objc dynamic var lastUpdated: Date?
+    @objc dynamic var primaryKey: String = ""
 
     static var writer: WorkerThread {
         WorkerThread(name: "RlmUser.Writer")
@@ -50,15 +50,21 @@ extension RlmUser {
     static func add(users: [User]) {
         autoreleasepool {
             writer.enqueue {
-                rlm.add(users.map{RlmUser(user: $0)}, update: .all)
+                let realm = rlm
+                try? realm.write {
+                    realm.add(users.map{RlmUser(user: $0)}, update: .all)
+                }
             }
         }
     }
     
     static func delete(user: User) {
         writer.enqueue {
-            if let object = rlm.object(ofType: Self.self, forPrimaryKey: user.id) {
-                rlm.delete(object)
+            let realm = rlm
+            try? realm.write {
+            if let object = realm.object(ofType: Self.self, forPrimaryKey: user.id) {
+                realm.delete(object)
+            }
             }
         }
     }

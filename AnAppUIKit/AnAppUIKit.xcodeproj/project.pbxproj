@@ -15,6 +15,7 @@
 		18ED042125A50703001ACD09 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED041C25A50703001ACD09 /* UIScrollView.swift */; };
 		18ED042225A50703001ACD09 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED041D25A50703001ACD09 /* UIViewController+Alert.swift */; };
 		18ED042325A50703001ACD09 /* UITextfield+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED041E25A50703001ACD09 /* UITextfield+Combine.swift */; };
+		18ED068F25ABFF40001ACD09 /* MVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED068E25ABFF40001ACD09 /* MVP.swift */; };
 		84896450AEFFE3A1F5542740 /* Pods_AnAppUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFA132FAB900F291D73D274 /* Pods_AnAppUIKit.framework */; };
 		EBE5D7BA7D3333B402E52E79 /* Pods_AnAppUIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE0F750B8247ACBA914C76D /* Pods_AnAppUIKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		18ED041C25A50703001ACD09 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		18ED041D25A50703001ACD09 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		18ED041E25A50703001ACD09 /* UITextfield+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextfield+Combine.swift"; sourceTree = "<group>"; };
+		18ED068E25ABFF40001ACD09 /* MVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP.swift; sourceTree = "<group>"; };
 		2AFA132FAB900F291D73D274 /* Pods_AnAppUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnAppUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F812937B840C17E9A5A18F /* Pods-AnAppUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnAppUIKit.release.xcconfig"; path = "Target Support Files/Pods-AnAppUIKit/Pods-AnAppUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		9FE0F750B8247ACBA914C76D /* Pods_AnAppUIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnAppUIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 		187E62A5259D20B900BB4A51 /* AnAppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				18ED068D25ABFF26001ACD09 /* Protocols */,
 				18ED041B25A50703001ACD09 /* Extensions */,
 				18ED041725A50703001ACD09 /* Views */,
 				187E62A6259D20B900BB4A51 /* AnAppUIKit.h */,
@@ -135,6 +138,14 @@
 				18ED041E25A50703001ACD09 /* UITextfield+Combine.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18ED068D25ABFF26001ACD09 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				18ED068E25ABFF40001ACD09 /* MVP.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BBA252A8B9F486D578C543D4 /* Pods */ = {
@@ -316,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18ED068F25ABFF40001ACD09 /* MVP.swift in Sources */,
 				18ED042225A50703001ACD09 /* UIViewController+Alert.swift in Sources */,
 				18ED041F25A50703001ACD09 /* LoadingIndicatorTableHeaderFooterView.swift in Sources */,
 				18ED042125A50703001ACD09 /* UIScrollView.swift in Sources */,

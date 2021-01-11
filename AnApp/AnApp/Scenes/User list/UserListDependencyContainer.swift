@@ -12,13 +12,24 @@ import AnAppKit
 class UserListDependencyContainer {
     
     private let factory: UserDataDependencyFactory
+    private let presenter: UserListPresenter
     
     init(factory: UserDataDependencyFactory) {
+        
+        func makeUserListPresenter(useCaseFactory: UserUseCaseFactory) -> UserListPresenter {
+            UserListPresenter(factory: useCaseFactory)
+        }
+        
         self.factory = factory
+        self.presenter = makeUserListPresenter(useCaseFactory: factory.makeUseCaseFactory())
     }
     
     func makeUserListViewModel() -> UserListViewModel {
         UserListViewModel(repository: factory.makeRepository())
+    }
+    
+    func makeUserListPresenter() -> UserListPresenter {
+        presenter
     }
     
     func makeUserListViewControllerFactory() -> UserListViewControllerFactory {
@@ -35,22 +46,26 @@ class UserListDependencyContainer {
 }
 
 extension UserListDependencyContainer: UserListViewControllerFactory {
-    func makeAddUserNavigationController(responder: AddUserResponder) -> UINavigationController {
+    func makeAddUserNavigationController() -> UINavigationController {
         let navC = UIStoryboard(name: "AddUser", bundle: nil).instantiateViewController(withIdentifier: "AddUserNavC") as! UINavigationController
         let vc = navC.viewControllers.first as! AddUserViewController
-        vc.viewModel = makeAddUserViewModel(responder: responder)
+        vc.viewModel = makeAddUserViewModel(responder: presenter)
         return navC
     }
     
-    func makeSortFieldsNavigationController(responder: SortFieldSelectionResponder, selectedField: User.SortableField) -> UINavigationController {
+    func makeSortFieldsNavigationController(selectedField: User.SortableField) -> UINavigationController {
         let navC = UIStoryboard(name: "SortUser", bundle: nil).instantiateViewController(withIdentifier: "SortNavC") as! UINavigationController
         let vc = navC.viewControllers.first as! SortFieldsTableViewController
-        vc.viewModel = makeSortFieldsViewModel(responder: responder, selectedField: selectedField)
+        vc.viewModel = makeSortFieldsViewModel(responder: presenter, selectedField: selectedField)
         return navC
     }
 }
 
 protocol UserListViewControllerFactory {
-    func makeAddUserNavigationController(responder: AddUserResponder) -> UINavigationController
-    func makeSortFieldsNavigationController(responder: SortFieldSelectionResponder, selectedField: User.SortableField) -> UINavigationController
+    func makeAddUserNavigationController() -> UINavigationController
+    func makeSortFieldsNavigationController(selectedField: User.SortableField) -> UINavigationController
+}
+
+class UserPresenterFactory {
+    
 }

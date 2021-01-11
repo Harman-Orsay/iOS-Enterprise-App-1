@@ -19,12 +19,12 @@
 		18ED040525A506AB001ACD09 /* UserListDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03F225A506AB001ACD09 /* UserListDependencyContainer.swift */; };
 		18ED040625A506AB001ACD09 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03F325A506AB001ACD09 /* UserListViewController.swift */; };
 		18ED040725A506AB001ACD09 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03F425A506AB001ACD09 /* UserList.storyboard */; };
-		18ED040825A506AB001ACD09 /* MetaData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03F625A506AB001ACD09 /* MetaData.storyboard */; };
-		18ED040925A506AB001ACD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03F725A506AB001ACD09 /* Main.storyboard */; };
+		18ED040825A506AB001ACD09 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03F625A506AB001ACD09 /* Profile.storyboard */; };
+		18ED040925A506AB001ACD09 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03F725A506AB001ACD09 /* Home.storyboard */; };
 		18ED040A25A506AB001ACD09 /* AddUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03FA25A506AB001ACD09 /* AddUser.storyboard */; };
 		18ED040B25A506AB001ACD09 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03FB25A506AB001ACD09 /* AddUserViewController.swift */; };
 		18ED040C25A506AB001ACD09 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03FC25A506AB001ACD09 /* AddUserViewModel.swift */; };
-		18ED040D25A506AB001ACD09 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03FD25A506AB001ACD09 /* TabBarViewController.swift */; };
+		18ED040D25A506AB001ACD09 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED03FD25A506AB001ACD09 /* HomeTabBarViewController.swift */; };
 		18ED040E25A506AB001ACD09 /* SortUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED03FF25A506AB001ACD09 /* SortUser.storyboard */; };
 		18ED040F25A506AB001ACD09 /* SortFieldsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED040025A506AB001ACD09 /* SortFieldsViewModel.swift */; };
 		18ED041025A506AB001ACD09 /* SortFieldsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED040125A506AB001ACD09 /* SortFieldsTableViewController.swift */; };
@@ -34,6 +34,16 @@
 		18ED043725A50C6E001ACD09 /* AnAppUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18ED043225A50C6E001ACD09 /* AnAppUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18ED043825A50C6E001ACD09 /* Utility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ED043325A50C6E001ACD09 /* Utility.framework */; };
 		18ED043925A50C6E001ACD09 /* Utility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18ED043325A50C6E001ACD09 /* Utility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18ED062F25A64B3C001ACD09 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED062E25A64B3C001ACD09 /* LaunchViewController.swift */; };
+		18ED063325A64B49001ACD09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED063225A64B49001ACD09 /* MainViewController.swift */; };
+		18ED063925A655B1001ACD09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED063825A655B1001ACD09 /* LoginViewController.swift */; };
+		18ED063F25A65B8C001ACD09 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED063E25A65B8C001ACD09 /* ProfileViewController.swift */; };
+		18ED064C25A6959B001ACD09 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED064B25A6959B001ACD09 /* Login.storyboard */; };
+		18ED068125ABF810001ACD09 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED068025ABF810001ACD09 /* ProfilePresenter.swift */; };
+		18ED068525ABF9FE001ACD09 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED068425ABF9FE001ACD09 /* LaunchPresenter.swift */; };
+		18ED068A25ABFE59001ACD09 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED068925ABFE59001ACD09 /* MainPresenter.swift */; };
+		18ED06AB25AC01BD001ACD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED06AA25AC01BD001ACD09 /* Main.storyboard */; };
+		18ED06AF25AC0237001ACD09 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ED06AE25AC0237001ACD09 /* Launch.storyboard */; };
 		ACD1994B8BE7941535ECB1B6 /* Pods_AnApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C45C1371C33E5C31B30F0D /* Pods_AnApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,18 +99,28 @@
 		18ED03F225A506AB001ACD09 /* UserListDependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListDependencyContainer.swift; sourceTree = "<group>"; };
 		18ED03F325A506AB001ACD09 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		18ED03F425A506AB001ACD09 /* UserList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
-		18ED03F625A506AB001ACD09 /* MetaData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MetaData.storyboard; sourceTree = "<group>"; };
-		18ED03F825A506AB001ACD09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18ED03F625A506AB001ACD09 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		18ED03F825A506AB001ACD09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		18ED03FA25A506AB001ACD09 /* AddUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddUser.storyboard; sourceTree = "<group>"; };
 		18ED03FB25A506AB001ACD09 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		18ED03FC25A506AB001ACD09 /* AddUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
-		18ED03FD25A506AB001ACD09 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		18ED03FD25A506AB001ACD09 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		18ED03FF25A506AB001ACD09 /* SortUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SortUser.storyboard; sourceTree = "<group>"; };
 		18ED040025A506AB001ACD09 /* SortFieldsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortFieldsViewModel.swift; sourceTree = "<group>"; };
 		18ED040125A506AB001ACD09 /* SortFieldsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortFieldsTableViewController.swift; sourceTree = "<group>"; };
 		18ED043125A50C6E001ACD09 /* AnAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ED043225A50C6E001ACD09 /* AnAppUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnAppUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ED043325A50C6E001ACD09 /* Utility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18ED062E25A64B3C001ACD09 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		18ED063225A64B49001ACD09 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18ED063825A655B1001ACD09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18ED063E25A65B8C001ACD09 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		18ED064B25A6959B001ACD09 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		18ED068025ABF810001ACD09 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		18ED068425ABF9FE001ACD09 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		18ED068925ABFE59001ACD09 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		18ED06AA25AC01BD001ACD09 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18ED06AE25AC0237001ACD09 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		67DA041B409C4EC79C111787 /* Pods-AnApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnApp.release.xcconfig"; path = "Target Support Files/Pods-AnApp/Pods-AnApp.release.xcconfig"; sourceTree = "<group>"; };
 		69C45C1371C33E5C31B30F0D /* Pods_AnApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB853B667952DE4901E4968B /* Pods-AnApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnApp.debug.xcconfig"; path = "Target Support Files/Pods-AnApp/Pods-AnApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +182,7 @@
 			children = (
 				187E620D259D1B6E00BB4A51 /* AppDelegate.swift */,
 				187E620F259D1B6E00BB4A51 /* SceneDelegate.swift */,
+				18ED03EE25A506AB001ACD09 /* AppDependencyContainer.swift */,
 				18ED03ED25A506AB001ACD09 /* Scenes */,
 				187E6216259D1B7100BB4A51 /* Assets.xcassets */,
 				187E6218259D1B7100BB4A51 /* LaunchScreen.storyboard */,
@@ -191,11 +212,12 @@
 		18ED03ED25A506AB001ACD09 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				18ED03F725A506AB001ACD09 /* Main.storyboard */,
-				18ED03EE25A506AB001ACD09 /* AppDependencyContainer.swift */,
-				18ED03FD25A506AB001ACD09 /* TabBarViewController.swift */,
+				18ED068825ABFE42001ACD09 /* Main */,
+				18ED064625A69359001ACD09 /* Launch */,
+				18ED064425A6923B001ACD09 /* Login */,
+				18ED064525A69346001ACD09 /* Home */,
 				18ED03EF25A506AB001ACD09 /* User list */,
-				18ED03F525A506AB001ACD09 /* Meta data */,
+				18ED03F525A506AB001ACD09 /* User Profile */,
 				18ED03F925A506AB001ACD09 /* Add user */,
 				18ED03FE25A506AB001ACD09 /* Sort user */,
 			);
@@ -214,12 +236,14 @@
 			path = "User list";
 			sourceTree = "<group>";
 		};
-		18ED03F525A506AB001ACD09 /* Meta data */ = {
+		18ED03F525A506AB001ACD09 /* User Profile */ = {
 			isa = PBXGroup;
 			children = (
-				18ED03F625A506AB001ACD09 /* MetaData.storyboard */,
+				18ED03F625A506AB001ACD09 /* Profile.storyboard */,
+				18ED063E25A65B8C001ACD09 /* ProfileViewController.swift */,
+				18ED068025ABF810001ACD09 /* ProfilePresenter.swift */,
 			);
-			path = "Meta data";
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 		18ED03F925A506AB001ACD09 /* Add user */ = {
@@ -240,6 +264,44 @@
 				18ED040125A506AB001ACD09 /* SortFieldsTableViewController.swift */,
 			);
 			path = "Sort user";
+			sourceTree = "<group>";
+		};
+		18ED064425A6923B001ACD09 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18ED064B25A6959B001ACD09 /* Login.storyboard */,
+				18ED063825A655B1001ACD09 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18ED064525A69346001ACD09 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18ED03F725A506AB001ACD09 /* Home.storyboard */,
+				18ED03FD25A506AB001ACD09 /* HomeTabBarViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18ED064625A69359001ACD09 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				18ED062E25A64B3C001ACD09 /* LaunchViewController.swift */,
+				18ED068425ABF9FE001ACD09 /* LaunchPresenter.swift */,
+				18ED06AE25AC0237001ACD09 /* Launch.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		18ED068825ABFE42001ACD09 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				18ED063225A64B49001ACD09 /* MainViewController.swift */,
+				18ED068925ABFE59001ACD09 /* MainPresenter.swift */,
+				18ED06AA25AC01BD001ACD09 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		CBDD49AEB3AE95F51230CA07 /* Frameworks */ = {
@@ -370,11 +432,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18ED040825A506AB001ACD09 /* MetaData.storyboard in Resources */,
+				18ED064C25A6959B001ACD09 /* Login.storyboard in Resources */,
+				18ED06AF25AC0237001ACD09 /* Launch.storyboard in Resources */,
+				18ED040825A506AB001ACD09 /* Profile.storyboard in Resources */,
 				18ED040E25A506AB001ACD09 /* SortUser.storyboard in Resources */,
 				187E621A259D1B7100BB4A51 /* LaunchScreen.storyboard in Resources */,
 				18ED040725A506AB001ACD09 /* UserList.storyboard in Resources */,
-				18ED040925A506AB001ACD09 /* Main.storyboard in Resources */,
+				18ED040925A506AB001ACD09 /* Home.storyboard in Resources */,
+				18ED06AB25AC01BD001ACD09 /* Main.storyboard in Resources */,
 				187E6217259D1B7100BB4A51 /* Assets.xcassets in Resources */,
 				18ED040A25A506AB001ACD09 /* AddUser.storyboard in Resources */,
 			);
@@ -460,16 +525,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18ED062F25A64B3C001ACD09 /* LaunchViewController.swift in Sources */,
 				18ED040B25A506AB001ACD09 /* AddUserViewController.swift in Sources */,
-				18ED040D25A506AB001ACD09 /* TabBarViewController.swift in Sources */,
+				18ED040D25A506AB001ACD09 /* HomeTabBarViewController.swift in Sources */,
+				18ED063925A655B1001ACD09 /* LoginViewController.swift in Sources */,
 				18ED040F25A506AB001ACD09 /* SortFieldsViewModel.swift in Sources */,
 				18ED040625A506AB001ACD09 /* UserListViewController.swift in Sources */,
+				18ED063F25A65B8C001ACD09 /* ProfileViewController.swift in Sources */,
 				18ED040C25A506AB001ACD09 /* AddUserViewModel.swift in Sources */,
+				18ED068A25ABFE59001ACD09 /* MainPresenter.swift in Sources */,
 				187E620E259D1B6E00BB4A51 /* AppDelegate.swift in Sources */,
+				18ED063325A64B49001ACD09 /* MainViewController.swift in Sources */,
+				18ED068125ABF810001ACD09 /* ProfilePresenter.swift in Sources */,
 				18ED041025A506AB001ACD09 /* SortFieldsTableViewController.swift in Sources */,
 				18ED040425A506AB001ACD09 /* UserList+TableView.swift in Sources */,
 				18ED040225A506AB001ACD09 /* AppDependencyContainer.swift in Sources */,
 				187E6210259D1B6E00BB4A51 /* SceneDelegate.swift in Sources */,
+				18ED068525ABF9FE001ACD09 /* LaunchPresenter.swift in Sources */,
 				18ED040325A506AB001ACD09 /* UserListViewModel.swift in Sources */,
 				18ED040525A506AB001ACD09 /* UserListDependencyContainer.swift in Sources */,
 			);
@@ -515,12 +587,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		18ED03F725A506AB001ACD09 /* Main.storyboard */ = {
+		18ED03F725A506AB001ACD09 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				18ED03F825A506AB001ACD09 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -95,6 +95,10 @@ public struct UserSession: Codable {
     self.profile = profile
     self.remoteSession = remoteSession
   }
+    
+    public var logInDate: Date {
+        remoteSession.createdOn
+    }
 }
 
 public struct UserProfile: Codable {

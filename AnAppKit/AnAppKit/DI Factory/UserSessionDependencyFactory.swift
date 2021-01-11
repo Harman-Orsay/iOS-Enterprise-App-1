@@ -9,6 +9,7 @@ import Foundation
 
 public protocol UserSessionDependencyFactory {
     func makeUserSessionUseCaseFactory() -> UserSessionUseCaseFactory
+    func makeRepository() -> UserSessionRepository
 }
 
 class UserSessionDependencyFactoryFactory: UserSessionDependencyFactory {

@@ -10,6 +10,7 @@ import Combine
 public protocol UserSessionUseCaseFactory {
     func makeLoginUseCase(username: String, password: String) -> LoginUseCase
     func makeLogOutUseCase() -> LogOutUseCase
+    func makeCheckLoginStatusUseCase() -> CheckLoginStatusUseCase
 }
 
 
@@ -27,5 +28,9 @@ class UserSessionUseCaseContainer: UserSessionUseCaseFactory {
     
     func makeLogOutUseCase() -> LogOutUseCase {
         LogOutUseCase(repository: repository)
+    }
+    
+    func makeCheckLoginStatusUseCase() -> CheckLoginStatusUseCase {
+        CheckLoginStatusUseCase(repository: repository)
     }
 }
