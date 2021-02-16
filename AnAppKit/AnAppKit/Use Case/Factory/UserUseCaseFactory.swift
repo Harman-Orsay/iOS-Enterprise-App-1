@@ -14,6 +14,7 @@ public protocol UserUseCaseFactory {
     func makeDeleteUserUseCase(user: User) -> DeleteUserUseCase
     func makeSortUserUseCase(sortField: User.SortableField) -> SortUsersUseCase
     func makeAddUserUseCase(user: User) -> AddUserUseCase
+    func makeUpdateWidgetUseCase(widgetList: [User], widgetStore: URL) -> UpdateUserWidgetDataUseCase
 }
 
 class UserUseCaseFactoryContainer: UserUseCaseFactory {
@@ -42,5 +43,9 @@ class UserUseCaseFactoryContainer: UserUseCaseFactory {
     
     func makeAddUserUseCase(user: User) -> AddUserUseCase {
         AddUserUseCase(repository: repository, user: user)
+    }
+    
+    func makeUpdateWidgetUseCase(widgetList: [User], widgetStore: URL) -> UpdateUserWidgetDataUseCase {
+        UpdateUserWidgetDataUseCase(widgetList: widgetList, widgetStoreUrl: widgetStore)
     }
 }

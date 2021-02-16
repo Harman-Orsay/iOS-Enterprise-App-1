@@ -54,10 +54,11 @@ extension UserListPresenter {
     func uiDidLoad() {
         useCaseFactory.makeGetUserUseCase()
             .execute(onStart: nil)
-            .sink {
-                self.users = $0
-                
-            }
+            .handleEvents(receiveOutput: { users in
+                _ = self.useCaseFactory.makeUpdateWidgetUseCase(widgetList: users,
+                                                            widgetStore: AppGroupTarget.configurableWidget.storeUrl!)
+            })
+            .sink {self.users = $0}
             .store(in: &subscriptions)
     }
     

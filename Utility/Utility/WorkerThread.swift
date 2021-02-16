@@ -7,12 +7,12 @@
 
 import Foundation
 
-@objc class WorkerThread: NSObject {
+@objc public class WorkerThread: NSObject {
     private var thread: Thread!
     private var blockQueue = [() -> Void]()
     private let queueCondition = NSCondition()
     
-    init(name: String) {
+    public init(name: String) {
         super.init()
         thread = Thread(target: self,
                         selector: #selector(threadWorker),
@@ -42,7 +42,7 @@ import Foundation
         }
     }
     
-    @objc func enqueue(block: @escaping(()->Void)) {
+    @objc public func enqueue(block: @escaping(()->Void)) {
         if !canWork {
             restart()
         }

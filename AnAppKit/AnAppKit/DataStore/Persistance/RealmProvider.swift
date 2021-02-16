@@ -5,6 +5,7 @@
 //
 
 import RealmSwift
+import Utility
 
 fileprivate struct RealmProvider {
     let configuration: Realm.Configuration

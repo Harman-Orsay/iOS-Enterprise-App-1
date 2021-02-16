@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Utility
 
 enum StubUserServiceEndpoint {
     case createUser
@@ -37,7 +38,7 @@ enum StubUserServiceEndpoint {
     var payload: Data? {
         
         switch self {
-        case .createUser: return File.getData(name: "CreateUserPayload", withExtension: "json")
+        case .createUser: return File.getData(name: "CreateUserPayload", withExtension: "json")!
         case .deleteUser: return nil
         case .fetchUsers: return nil
         }

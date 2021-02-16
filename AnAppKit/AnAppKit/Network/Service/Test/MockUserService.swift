@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Utility
 
 class MockUserService: UserService {
     
@@ -23,7 +24,7 @@ class MockUserService: UserService {
         
         
         let userDtos = try! JSONDecoder().decode(UserFetchResponseSuccessDTO.self,
-                                                  from: File.getData(name: "FetchUsersSuccessResponse"))
+                                                  from: File.getData(name: "FetchUsersSuccessResponse")!)
             .data
        
         let users = userDtos.map{User(dto: $0)}
@@ -48,7 +49,7 @@ class MockUserService: UserService {
                 .eraseToAnyPublisher()
         }
         let userDto = try! JSONDecoder().decode(UserCreateReponseSuccessDTO.self,
-                                             from: File.getData(name: "CreateUserSuccessResponse"))
+                                             from: File.getData(name: "CreateUserSuccessResponse")!)
             .data
         let user = User(dto: userDto)
         return Just(user)

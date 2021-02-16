@@ -6,6 +6,7 @@
 //
 
 import RealmSwift
+import Utility
 
 class RlmUser: Object {
         

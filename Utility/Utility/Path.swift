@@ -4,12 +4,12 @@
 //  Created by Rohan Ramsay on 1/01/21.
 //
 
-struct Path {
+public struct Path {
     static func getAppSupportDirectoryPath() -> URL? {
         return try? FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     }
     
-    static func inAppSupportDirectory(directory: String) -> URL? {
+    public static func inAppSupportDirectory(directory: String) -> URL? {
         if let url = Path.getAppSupportDirectoryPath()?.appendingPathComponent(directory, isDirectory: true){
             if !FileManager.default.fileExists(atPath: url.path) {
                 try? FileManager.default.createDirectory(atPath: url.path, withIntermediateDirectories: true, attributes: nil)
@@ -19,18 +19,18 @@ struct Path {
         return getAppSupportDirectoryPath()
     }
     
-    static func inAppSupportDirectory(_ fileName: String) -> URL {
+    public static func inAppSupportDirectory(_ fileName: String) -> URL {
         if let baseUrl = getAppSupportDirectoryPath() {
             return baseUrl.appendingPathComponent(fileName, isDirectory: false)
         }
         return try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName, isDirectory: false)
     }
     
-    static func inDirectory(at path: URL?, fileName: String) -> URL {
+    public static func inDirectory(at path: URL?, fileName: String, isDirectory: Bool = false) -> URL {
         if let baseUrl = path ?? getAppSupportDirectoryPath() {
-            return baseUrl.appendingPathComponent(fileName, isDirectory: false)
+            return baseUrl.appendingPathComponent(fileName, isDirectory: isDirectory)
         }
-        return try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName, isDirectory: false)
+        return try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName, isDirectory: isDirectory)
     }
     
     static func removeFileSecurity(filePath: String?) {
