@@ -7,55 +7,38 @@
 
 import WidgetKit
 
-struct SimpleEntry: TimelineEntry {
+struct WidgetEntry: TimelineEntry {
     let date: Date
     let configuration: WidgetConfigurationIntent
-    let user: UserDTO?
+    
+    let user: User?
+    let summary: Summary?
 }
 
-//DUPLICATE from APP KIT - dont wanna import appkit but dont wann redeclare a model either ???
-//soln - a smaller struct derived from the main DTO ?
-struct UserDTO: Codable { // for GET & POST
+//Similar to UserDTO - objctive is to avoid importing the whole AppKit & not sharing the files across targets unless absolutely essential. + using models from real kit will burden compliance -- easier for the widget to dictate the model!
+//TODO: - Put this model in a separate file
+//- add that file to main app target
+//- add methods there to make sure app uses them to get the data it writes to the widget store!!!
+
+struct User: Codable {
     let id: Int?
-    let createdAt: String?
-    let updatedAt: String?
     let email: String
     let gender: String
     let name: String
     let status: String
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case email
-        case gender
-        case name
-        case status
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-    }
-    
-    static let placeholder: UserDTO = UserDTO(id: 1, createdAt: nil, updatedAt: nil, email: "email", gender: "gender", name: "name", status: "status")
-}
-
-extension UserDTO {
-    
     var isActive: Bool {
         status == "Active"
     }
     
-    var createdAtDate: Date? {
-        createdAt?.toDate(dateFormatter: Self.dateFormatter)
+    var isMale: Bool {
+        gender == "Male"
     }
     
-    var updatedAtDate: Date? {
-        updatedAt?.toDate(dateFormatter: Self.dateFormatter)
-    }
-    
-    static var dateFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        df.timeZone = TimeZone(secondsFromGMT: 0)
-        df.locale = Locale(identifier: "en_US_POSIX")
-        return df
-    }()
+    static let placeholder: User = User(id: nil, email: "email", gender: "gender", name: "name", status: "status")
+}
+
+struct Summary {
+    let userCount: Int?
+    let activeUserCount: Int?
 }

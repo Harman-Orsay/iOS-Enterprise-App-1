@@ -17,8 +17,10 @@ struct AConfigurableWidget: Widget {
         IntentConfiguration(kind: kind,
                             intent: WidgetConfigurationIntent.self,
                             provider: Provider(storeURL: AppGroupTarget.configurableWidget.storeUrl)) { entry in
-            AConfigurableWidgetEntryView(entry: entry)
+            
+            UserWidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemMedium, .systemSmall])
         .configurationDisplayName("A configurable Widget")
         .description("A configurable widget showing random users")
     }

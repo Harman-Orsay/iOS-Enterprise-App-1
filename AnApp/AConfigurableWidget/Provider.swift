@@ -10,9 +10,9 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
         
-    typealias Entry = SimpleEntry
+    typealias Entry = WidgetEntry
     
-    let users: [UserDTO]
+    let users: [User]
 
     init(storeURL: URL?) {
         guard let storeUrl = storeURL else {
@@ -20,37 +20,42 @@ struct Provider: IntentTimelineProvider {
             return
         }
         let data = (try? Data(contentsOf: storeUrl)) ?? Data()
-        self.users = (try? JSONDecoder().decode([UserDTO].self, from: data)) ?? []
+        self.users = (try? JSONDecoder().decode([User].self, from: data)) ?? []
     }
     
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: WidgetConfigurationIntent(), user: UserDTO.placeholder)
+    func placeholder(in context: Context) -> WidgetEntry {
+        WidgetEntry(date: Date(),
+                    configuration: WidgetConfigurationIntent(),
+                    user: User.placeholder,
+                    summary: nil)
     }
 
-    func getSnapshot(for configuration: WidgetConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration, user: nil)
+    func getSnapshot(for configuration: WidgetConfigurationIntent, in context: Context, completion: @escaping (WidgetEntry) -> ()) {
+        let entry = WidgetEntry(date: Date(), configuration: configuration, user: nil, summary: nil)
         completion(entry)
     }
 
     func getTimeline(for configuration: WidgetConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-        var filteredUsers: [UserDTO] = users.count > 0 || configuration.showMocks == false ? users : loadMockUsers()
-        
+        var entries: [WidgetEntry] = []
+        var filteredUsers: [User] = users.count > 0 || configuration.showMocks == false ? users : loadMockUsers()
+        let summary: Summary = Summary(userCount: filteredUsers.count == 0 ? nil : filteredUsers.count,
+                                       activeUserCount: filteredUsers.count == 0 ? nil : filteredUsers.filter{$0.isActive}.count)
         if configuration.showInactiveUsers == false{
-            filteredUsers = users.filter{$0.isActive}
+            filteredUsers = filteredUsers.filter{$0.isActive}
         }
-        
+                
         filteredUsers.shuffle()
 
-        let currentDate = Date()
-        for user in filteredUsers { //5 minute difference at least! - didn work - 5, 15
-            let entryDate = Calendar.current.date(byAdding: .minute, value: 30, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration, user: user)
+        var currentDate = Date()
+        for user in filteredUsers { //5 minute difference at least
+            let entryDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+            currentDate = entryDate
+            let entry = WidgetEntry(date: entryDate, configuration: configuration, user: user, summary: summary)
             entries.append(entry)
         }
 
         if entries.count == 0 {
-            let entry = SimpleEntry(date: Date(), configuration: configuration, user: nil)
+            let entry = WidgetEntry(date: Date(), configuration: configuration, user: nil, summary: nil)
             entries.append(entry)
         }
         
@@ -60,9 +65,9 @@ struct Provider: IntentTimelineProvider {
 }
 
 extension Provider {
-    func loadMockUsers() -> [UserDTO] {
+    func loadMockUsers() -> [User] {
         class EmptyClass{}
         let data = (try? Data(contentsOf: Bundle(for: EmptyClass.self).url(forResource: "MockWidgetStore", withExtension: "json")!)) ?? Data()
-        return (try? JSONDecoder().decode([UserDTO].self, from: data)) ?? []
+        return (try? JSONDecoder().decode([User].self, from: data)) ?? []
     }
 }

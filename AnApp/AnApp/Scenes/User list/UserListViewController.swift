@@ -9,6 +9,7 @@
 import UIKit
 import AnAppKit
 import AnAppUIKit
+import WidgetKit
 
 class UserListViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Users"
+        WidgetCenter.shared.reloadTimelines(ofKind: AppGroupTarget.configurableWidget.widgetKind!)//temp to test refresh
         setupTableView()
         presenter.uiDidLoad()
         fetchMore()

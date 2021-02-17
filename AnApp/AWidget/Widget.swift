@@ -16,6 +16,7 @@ struct AWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             AWidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemSmall])
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
