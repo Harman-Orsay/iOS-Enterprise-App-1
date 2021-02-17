@@ -14,22 +14,24 @@ struct UserWidgetEntryView : View {
     
     var body: some View {
         if let user = entry.user, widgetFamily == .systemMedium {
-            
-            UserWidgetView_medium(user: user,
-                                  showEmail: entry.configuration.displayedFields?.fields.showEmail == true,
-                                  showGender: entry.configuration.displayedFields?.fields.showGender == true)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(LinearGradient(gradient: Gradient(colors: [.white, .blue]),
+            Link(destination: user.widgetUrl) {
+                UserWidgetView_medium(user: user,
+                                      showEmail: entry.configuration.displayedFields?.fields.showEmail == true,
+                                      showGender: entry.configuration.displayedFields?.fields.showGender == true)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(LinearGradient(gradient: Gradient(colors: [.white, .blue]),
                                                startPoint: .top,
-                                               endPoint: .bottom))
+                                               endPoint: .bottomLeading))
+            }
             
         } else if let summary = entry.summary, widgetFamily == .systemSmall {
             
             SummaryWidgetView_small(summary: summary)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(LinearGradient(gradient: Gradient(colors: [.yellow, .orange]),
-                                               startPoint: .top,
-                                               endPoint: .bottom))
+                                           startPoint: .top,
+                                           endPoint: .bottom))
+                .widgetURL(summary.widgetUrl)
             
         } else {
             

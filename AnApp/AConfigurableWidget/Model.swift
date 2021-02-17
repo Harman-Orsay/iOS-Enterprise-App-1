@@ -6,6 +6,7 @@
 //
 
 import WidgetKit
+import Foundation
 
 struct WidgetEntry: TimelineEntry {
     let date: Date
@@ -35,10 +36,31 @@ struct User: Codable {
         gender == "Male"
     }
     
+    var widgetUrl: URL {
+        var components = URLComponents()
+        components.scheme = "userwidget"
+        components.host = "user"
+        
+        var parameters = [URLQueryItem]()
+        if let id = self.id {
+            parameters.append(URLQueryItem(name: "id", value: "\(id)"))
+        }
+        parameters.append(URLQueryItem(name: "email", value: email))
+        parameters.append(URLQueryItem(name: "name", value: name))
+        parameters.append(URLQueryItem(name: "gender", value: gender))
+        components.queryItems = parameters
+        
+        return components.url ?? URL(string: "userwidget://formattingerror")!
+    }
+    
     static let placeholder: User = User(id: nil, email: "email", gender: "gender", name: "name", status: "status")
 }
 
 struct Summary {
     let userCount: Int?
     let activeUserCount: Int?
+    
+    var widgetUrl: URL {
+        URL(string:"userwidget://summary")!
+    }
 }
